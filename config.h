@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=16:antialias=true:autohint=true";
+static char *font = "Mono:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -95,24 +95,22 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
 	"#282936",
-	"red3",
-	"green3",
+	"hotpink3",
+	"turquoise4",
 	"yellow3",
 	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
+	"mediumpurple3",
+	"plum4",
+	"white",
+// bright
+	"gray53",
+	"hotpink3",
+	"turquoise4",
+	"cornsilk1",
+	"plum4",
+	"mediumpurple3",
+	"lightslategrey",
 	"white",
 
 	[255] = 0,
