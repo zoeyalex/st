@@ -102,7 +102,7 @@ static const char *colorname[] = {
 	"blue2",
 	"mediumpurple3",
 	"plum4",
-    "grey74",
+    "grey78",
 // bright
 	"gray53",
 	"hotpink3",
@@ -111,7 +111,7 @@ static const char *colorname[] = {
 	"plum4",
 	"mediumpurple3",
 	"lightslategrey",
-    "grey74",
+    "grey78",
 
 	[255] = 0,
 
