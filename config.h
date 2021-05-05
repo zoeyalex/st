@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "monospace:pixelsize=16:antialias=true:autohint=true";
+static char *font = "inconsolata:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -27,7 +27,7 @@ char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 0.3;
-static float chscale = 1.0;
+static float chscale = 1;
 
 /*
  * word delimiter string
@@ -98,11 +98,11 @@ static const char *colorname[] = {
 	"#282936",
 	"hotpink3",
 	"turquoise4",
-	"yellow3",
+	"LightGoldenrod2",
 	"blue2",
 	"mediumpurple3",
 	"plum4",
-	"white",
+    "grey74",
 // bright
 	"gray53",
 	"hotpink3",
@@ -111,7 +111,7 @@ static const char *colorname[] = {
 	"plum4",
 	"mediumpurple3",
 	"lightslategrey",
-	"white",
+    "grey74",
 
 	[255] = 0,
 
