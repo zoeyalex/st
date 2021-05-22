@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "SF Mono:pixelsize=16:antialias=true:autohint=true";
+static char *font = "Tamzen:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -16,7 +16,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/zsh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -98,22 +98,23 @@ float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#292b2e",
-	"#cd6090",
-	"#00868b",
+    "#1c1c1c",
+	"#F4E1DC",
+	"#5FAFAF",
 	"#eedc82",
-	"#2D3F70",
-	"#8968cd",
-	"#8b668b",
-    "#c7c7c7",
-// bright
+	"#6572A1",
+	"#5F5F87",
+	"#DAAEEA",
+    "#FFFFFF",
+  /*"#c7c7c7",*/
+   /* bright */
     "#555773",
     "#E68AB3",
-	"#2d9574",
+	"#AFAFD7",
 	"#fff8dc",
-	"#7590db",
-	"#A493C9",
-	"#bc6ec5",
+	"#5F87AF",
+	"#AF87AF",
+	"#A17CB8",
     "#E5E0E0",
 
 	[255] = 0,
@@ -129,8 +130,9 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 258;
+unsigned int defaultfg = 10;
+/*unsigned int defaultbg = 258;*/
+unsigned int defaultbg = 0;
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
@@ -201,6 +203,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
+	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
 
 /*
