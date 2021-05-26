@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Tamzen:pixelsize=16:antialias=true:autohint=true";
+static char *font = "Tamzen:pixelsize=15:antialias=true:autohint=true:style=Regular";
 static int borderpx = 2;
 
 /*
