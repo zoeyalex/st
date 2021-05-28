@@ -98,23 +98,32 @@ float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-    "#1c1c1c",
-	"#BE414C",
-	"#52C08B",
-	"#eedc82",
-	"#3666AB",
-	"#A17CB8",
-    "#4393D1",
-    "#FFFFFF",
-   /* bright */
-    "#404040",
-    "#E84F5D",
-    "#62E6A6",
-	"#fff8dc",
-    "#4684DE",
-	"#DAAEEA",
-    "#59C1FF",
-	"#AFAFD7",
+
+/*                    DRACULA                   */
+    "#1c1c1c", "#ff5555", "#50fa7b", "#f1fa8c",
+    "#bd93f9", "#ff79c6", "#8be9fd", "#bbbbbb",
+
+    "#44475a", "#ff5555", "#50fa7b", "#f1fa8c",
+    "#bd93f9", "#ff79c6", "#8be9fd", "#afafd7",
+
+/*                     VIVID                    */
+    /*
+    "#1c1c1c", "#BE414C", "#52C08B", "#eedc82",
+    "#3666AB", "#A17CB8", "#4393D1", "#FFFFFF",
+
+    "#404040", "#E84F5D", "#62E6A6", "#fff8dc",
+    "#4684DE", "#DAAEEA", "#59C1FF", "#AFAFD7",
+    */
+
+/*                      VIM                     */
+    /*
+    "#1c1c1c", "#ab4242", "#92cd72", "#dbe5a0",
+    "#5f87af", "#85678f", "#42a497", "#d6d6d6",
+
+    "#333333", "#cc6666", "#97D18F", "#e8e47e",
+    "#87afd7", "#af87af", "#5fafaf", "#afafd7",
+    */
+
 
 	[255] = 0,
 
