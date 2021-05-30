@@ -101,7 +101,7 @@ static const char *colorname[] = {
 
 /*                    DRACULA                   */
     "#1c1c1c", "#ff5555", "#50fa7b", "#f1fa8c",
-    "#bd93f9", "#ff79c6", "#8be9fd", "#bbbbbb",
+    "#bd93f9", "#ff79c6", "#8be9fd", "#ffffff",
 
     "#44475a", "#ff5555", "#50fa7b", "#f1fa8c",
     "#bd93f9", "#ff79c6", "#8be9fd", "#afafd7",
