@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Tamzen:pixelsize=15:antialias=true:autohint=true:style=Regular";
+static char *font = "undefined-medium:pixelsize=20:antialias=true:autohint=true:style=Regular";
 static int borderpx = 2;
 
 /*
@@ -94,36 +94,90 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
+    "#010101",
+    "#FF56FF",
+    "#57FFFF",
+    "#FFFFFF",
+    "#57FFFF",
+    "#FF56FF",
+    "#57FFFF",
+    "#FFFFFF",
+
+    "#010101",
+    "#FF56FF",
+    "#57FFFF",
+    "#FFFFFF",
+    "#FF56FF",
+    "#FF56FF",
+    "#57FFFF",
+    "#FFFFFF",
+
+
+  /*   OWN  */
+  /*  "#252934",
+    "#BF616A",
+    "#A3BE8C",
+    "#EBCB8B",
+    "#afafd7",
+    "#C75E9A",
+    "#88C0D0",
+    "#D8DEE9",
+
+    "#3B4252",
+    "#BF616A",
+    "#A3BE8C",
+    "#EBCB8B",
+    "#afafd7",
+    "#C75E9A",
+    "#88C0D0",
+    "#E5E9F0",
+*/
 
 /*                    DRACULA                   */
-    "#1c1c1c", "#ff5555", "#50fa7b", "#f1fa8c",
-    "#bd93f9", "#ff79c6", "#8be9fd", "#ffffff",
+/*
+    "#2E3440",
+    "#ff5555",
+    "#50fa7b",
+    "#f1fa8c",
+    "#bd93f9",
+    "#ff79c6",
+    "#88C0D0",
+    "#ffffff",
 
-    "#44475a", "#ff5555", "#50fa7b", "#f1fa8c",
-    "#bd93f9", "#ff79c6", "#8be9fd", "#afafd7",
-
-/*                     VIVID                    */
-    /*
-    "#1c1c1c", "#BE414C", "#52C08B", "#eedc82",
-    "#3666AB", "#A17CB8", "#4393D1", "#FFFFFF",
-
-    "#404040", "#E84F5D", "#62E6A6", "#fff8dc",
-    "#4684DE", "#DAAEEA", "#59C1FF", "#AFAFD7",
-    */
+    "#44475a",
+    "#ff5555",
+    "#50fa7b",
+    "#f1fa8c",
+    "#bd93f9",
+    "#ff79c6",
+    "#88C0D0",
+    "#afafd7",
+*/
 
 /*                      VIM                     */
-    /*
-    "#1c1c1c", "#ab4242", "#92cd72", "#dbe5a0",
-    "#5f87af", "#85678f", "#42a497", "#d6d6d6",
+/*
+    "#1c1c1c",
+    "#ab4242",
+    "#92cd72",
+    "#dbe5a0",
+    "#5f87af",
+    "#85678f",
+    "#42a497",
+    "#d6d6d6",
 
-    "#333333", "#cc6666", "#97D18F", "#e8e47e",
-    "#87afd7", "#af87af", "#5fafaf", "#afafd7",
-    */
-
+    "#333333",
+    "#cc6666",
+    "#97D18F",
+    "#e8e47e",
+    "#87afd7",
+    "#af87af",
+    "#5fafaf",
+    "#afafd7",
+*/
 
 	[255] = 0,
 
