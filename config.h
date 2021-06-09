@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "undefined-medium:pixelsize=20:antialias=true:autohint=true:style=Regular";
+static char *font = "Terminus:pixelsize=14:antialias=true:autohint=true:style=Regular";
 static int borderpx = 2;
 
 /*
@@ -98,7 +98,28 @@ float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-    "#010101",
+  "#000000",
+  "#3C5B82",
+  "#405E83",
+  "#4B6A95",
+  "#5375A5",
+  "#5C85BA",
+  "#6B9ED6",
+  "#ACC6E2",
+  
+  "#788A9E",
+  "#3C5B82",
+  "#405E83",
+  "#4B6A95",
+  "#5375A5",
+  "#5C85BA",
+  "#6B9ED6",
+  "#ACC6E2",
+  
+
+  
+    /* RETRO */
+  /*  "#010101",
     "#FF56FF",
     "#57FFFF",
     "#FFFFFF",
@@ -115,10 +136,10 @@ static const char *colorname[] = {
     "#FF56FF",
     "#57FFFF",
     "#FFFFFF",
-
-
+*/
   /*   OWN  */
-  /*  "#252934",
+    /*
+    "#252934",
     "#BF616A",
     "#A3BE8C",
     "#EBCB8B",
