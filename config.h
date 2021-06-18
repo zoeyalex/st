@@ -26,7 +26,7 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 1;
+static float cwscale = 0.95;
 static float chscale = 1;
 
 /*
@@ -60,7 +60,7 @@ static double maxlatency = 33;
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
-static unsigned int blinktimeout = 800;
+static unsigned int blinktimeout = 0;
 
 /*
  * thickness of underline and bar cursors
@@ -96,109 +96,29 @@ unsigned int tabspaces = 8;
 /* bg opacity */
 float alpha = 1;
 
-/* Terminal colors (16 first used in escape sequence) */
+/* Terminal colors (16 first used in escape sequence)  Format = 8norm \n 8bright in regular order e.g. black, red... */
 static const char *colorname[] = {
-  "#000000",
-  "#3C5B82",
-  "#405E83",
-  "#4B6A95",
-  "#5375A5",
-  "#5C85BA",
-  "#6B9ED6",
-  "#ACC6E2",
-  
-  "#788A9E",
-  "#3C5B82",
-  "#405E83",
-  "#4B6A95",
-  "#5375A5",
-  "#5C85BA",
-  "#6B9ED6",
-  "#ACC6E2",
-  
+    /* SPACE */
+    "#000000", "#3C5B82", "#405E83", "#4B6A95", "#5375A5", "#5C85BA", "#6B9ED6", "#ACC6E2",
+    "#788A9E", "#3C5B82", "#405E83", "#4B6A95", "#5375A5", "#5C85BA", "#6B9ED6", "#ACC6E2",
 
-  
     /* RETRO */
-  /*  "#010101",
-    "#FF56FF",
-    "#57FFFF",
-    "#FFFFFF",
-    "#57FFFF",
-    "#FF56FF",
-    "#57FFFF",
-    "#FFFFFF",
-
-    "#010101",
-    "#FF56FF",
-    "#57FFFF",
-    "#FFFFFF",
-    "#FF56FF",
-    "#FF56FF",
-    "#57FFFF",
-    "#FFFFFF",
-*/
-  /*   OWN  */
     /*
-    "#252934",
-    "#BF616A",
-    "#A3BE8C",
-    "#EBCB8B",
-    "#afafd7",
-    "#C75E9A",
-    "#88C0D0",
-    "#D8DEE9",
+    "#010101", "#FF56FF", "#57FFFF", "#FFFFFF", "#57FFFF", "#FF56FF", "#57FFFF", "#FFFFFF",
+    "#010101", "#FF56FF", "#57FFFF", "#FFFFFF", "#FF56FF", "#FF56FF", "#57FFFF", "#FFFFFF",
+    */
 
-    "#3B4252",
-    "#BF616A",
-    "#A3BE8C",
-    "#EBCB8B",
-    "#afafd7",
-    "#C75E9A",
-    "#88C0D0",
-    "#E5E9F0",
-*/
+    /* DRACULA */
+    /*
+    "#2E3440", "#ff5555", "#50fa7b", "#f1fa8c", "#bd93f9", "#ff79c6", "#88C0D0", "#ffffff",
+    "#44475a", "#ff5555", "#50fa7b", "#f1fa8c", "#bd93f9", "#ff79c6", "#88C0D0", "#ffffff",
+    */
 
-/*                    DRACULA                   */
-/*
-    "#2E3440",
-    "#ff5555",
-    "#50fa7b",
-    "#f1fa8c",
-    "#bd93f9",
-    "#ff79c6",
-    "#88C0D0",
-    "#ffffff",
-
-    "#44475a",
-    "#ff5555",
-    "#50fa7b",
-    "#f1fa8c",
-    "#bd93f9",
-    "#ff79c6",
-    "#88C0D0",
-    "#afafd7",
-*/
-
-/*                      VIM                     */
-/*
-    "#1c1c1c",
-    "#ab4242",
-    "#92cd72",
-    "#dbe5a0",
-    "#5f87af",
-    "#85678f",
-    "#42a497",
-    "#d6d6d6",
-
-    "#333333",
-    "#cc6666",
-    "#97D18F",
-    "#e8e47e",
-    "#87afd7",
-    "#af87af",
-    "#5fafaf",
-    "#afafd7",
-*/
+    /* VIM */
+    /*
+    "#1c1c1c", "#ab4242", "#92cd72", "#dbe5a0", "#5f87af", "#85678f", "#42a497", "#d6d6d6",
+    "#333333", "#cc6666", "#97D18F", "#e8e47e", "#87afd7", "#af87af", "#5fafaf", "#afafd7",
+    */
 
 	[255] = 0,
 
