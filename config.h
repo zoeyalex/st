@@ -98,26 +98,30 @@ float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence)  Format = 8norm \n 8bright in regular order e.g. black, red... */
 static const char *colorname[] = {
+    /* LAIN */
+    "#000000","#8A4C5A","#9B5565","#A65B6C","#B76477","#C26A7E","#D8768D","#E8B5C1",
+    "#A27E87","#8A4C5A","#9B5565","#A65B6C","#B76477","#C26A7E","#D8768D","#E8B5C1",
     /* SPACE */
-    "#000000", "#3C5B82", "#405E83", "#4B6A95", "#5375A5", "#5C85BA", "#6B9ED6", "#ACC6E2",
-    "#788A9E", "#3C5B82", "#405E83", "#4B6A95", "#5375A5", "#5C85BA", "#6B9ED6", "#ACC6E2",
-
+    /*
+    "#000000","#3C5B82","#405E83","#4B6A95","#5375A5","#5C85BA","#6B9ED6","#ACC6E2",
+    "#788A9E","#3C5B82","#405E83","#4B6A95","#5375A5","#5C85BA","#6B9ED6","#ACC6E2",
+    */
     /* RETRO */
     /*
-    "#010101", "#FF56FF", "#57FFFF", "#FFFFFF", "#57FFFF", "#FF56FF", "#57FFFF", "#FFFFFF",
-    "#010101", "#FF56FF", "#57FFFF", "#FFFFFF", "#FF56FF", "#FF56FF", "#57FFFF", "#FFFFFF",
+    "#010101","#FF56FF","#57FFFF","#FFFFFF","#57FFFF","#FF56FF","#57FFFF","#FFFFFF",
+    "#010101","#FF56FF","#57FFFF","#FFFFFF","#FF56FF","#FF56FF","#57FFFF","#FFFFFF",
     */
 
     /* DRACULA */
     /*
-    "#2E3440", "#ff5555", "#50fa7b", "#f1fa8c", "#bd93f9", "#ff79c6", "#88C0D0", "#ffffff",
-    "#44475a", "#ff5555", "#50fa7b", "#f1fa8c", "#bd93f9", "#ff79c6", "#88C0D0", "#ffffff",
+    "#2E3440","#ff5555","#50fa7b","#f1fa8c","#bd93f9","#ff79c6","#88C0D0","#ffffff",
+    "#44475a","#ff5555","#50fa7b","#f1fa8c","#bd93f9","#ff79c6","#88C0D0","#ffffff",
     */
 
     /* VIM */
     /*
-    "#1c1c1c", "#ab4242", "#92cd72", "#dbe5a0", "#5f87af", "#85678f", "#42a497", "#d6d6d6",
-    "#333333", "#cc6666", "#97D18F", "#e8e47e", "#87afd7", "#af87af", "#5fafaf", "#afafd7",
+    "#1c1c1c","#ab4242","#92cd72","#dbe5a0","#5f87af","#85678f","#42a497","#d6d6d6",
+    "#333333","#cc6666","#97D18F","#e8e47e","#87afd7","#af87af","#5fafaf","#afafd7",
     */
 
 	[255] = 0,
