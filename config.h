@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Terminus:pixelsize=14:antialias=true:autohint=true:style=Regular";
-static int borderpx = 2;
+static char *font = "Cozette:pixelsize=12:antialias=true:autohint=true:style=Regular";
+static int borderpx = 1.5;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -26,7 +26,7 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 0.95;
+static float cwscale = 0.8;
 static float chscale = 1;
 
 /*
@@ -98,7 +98,15 @@ float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence)  Format = 8norm \n 8bright in regular order e.g. black, red... */
 static const char *colorname[] = {
-    /* LAIN */
+    /* POWERLINE */
+    "#090C12","#6F3749","#384452","#4A3347","#4B545E","#7B5258","#8A6B6F","#C6999F",
+    "#293445","#6F3749","#384452","#4A3347","#4B545E","#7B5258","#8A6B6F","#C6999F",
+    /* LAIN WHITE */
+    /*
+    "#000000","#884E5A","#975764","#A1616C","#B46E79","#C1697E","#9C8372","#CDBEB5",
+    "#8F857E","#884E5A","#975764","#A1616C","#B46E79","#C1697E","#9C8372","#CDBEB5",
+    */
+    /* LAIN PINK */
     "#000000","#8A4C5A","#9B5565","#A65B6C","#B76477","#C26A7E","#D8768D","#E8B5C1",
     "#A27E87","#8A4C5A","#9B5565","#A65B6C","#B76477","#C26A7E","#D8768D","#E8B5C1",
     /* SPACE */
