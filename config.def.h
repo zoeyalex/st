@@ -1,12 +1,11 @@
 /* See LICENSE file for copyright and license details. */
+static char *fonts[] = {
+	"Cozette:pixelsize=12:antialias=true:autohint=true:style=Regular",
+	"Terminus:pixelsize=12:antialias=true:autohint=true:style=Regular",
+};
+static size_t currentfont = 0;
 
-/*
- * appearance
- *
- * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
- */
-static char *font = "Tamzen:pixelsize=16:antialias=true:autohint=true";
-static int borderpx = 2;
+static int borderpx = 1.5;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -26,7 +25,7 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 1;
+static float cwscale = 0.8;
 static float chscale = 1;
 
 /*
@@ -60,7 +59,7 @@ static double maxlatency = 33;
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
-static unsigned int blinktimeout = 800;
+static unsigned int blinktimeout = 0;
 
 /*
  * thickness of underline and bar cursors
@@ -94,28 +93,43 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 1;
 
-/* Terminal colors (16 first used in escape sequence) */
+/* Terminal colors (16 first used in escape sequence)  Format = 8norm \n 8bright in regular order e.g. black, red... */
 static const char *colorname[] = {
-    "#1c1c1c",
-	"#F4E1DC",
-	"#5FAFAF",
-	"#eedc82",
-	"#6572A1",
-	"#5F5F87",
-	"#DAAEEA",
-    "#FFFFFF",
-  /*"#c7c7c7",*/
-   /* bright */
-    "#555773",
-    "#E68AB3",
-	"#AFAFD7",
-	"#fff8dc",
-	"#5F87AF",
-	"#AF87AF",
-	"#A17CB8",
-    "#E5E0E0",
+    /* POWERLINE */
+    "#090C12","#6F3749","#384452","#4A3347","#4B545E","#7B5258","#8A6B6F","#C6999F",
+    "#293445","#6F3749","#384452","#4A3347","#4B545E","#7B5258","#8A6B6F","#C6999F",
+    /* LAIN WHITE */
+    /*
+    "#000000","#884E5A","#975764","#A1616C","#B46E79","#C1697E","#9C8372","#CDBEB5",
+    "#8F857E","#884E5A","#975764","#A1616C","#B46E79","#C1697E","#9C8372","#CDBEB5",
+    */
+    /* LAIN PINK */
+    "#000000","#8A4C5A","#9B5565","#A65B6C","#B76477","#C26A7E","#D8768D","#E8B5C1",
+    "#A27E87","#8A4C5A","#9B5565","#A65B6C","#B76477","#C26A7E","#D8768D","#E8B5C1",
+    /* SPACE */
+    /*
+    "#000000","#3C5B82","#405E83","#4B6A95","#5375A5","#5C85BA","#6B9ED6","#ACC6E2",
+    "#788A9E","#3C5B82","#405E83","#4B6A95","#5375A5","#5C85BA","#6B9ED6","#ACC6E2",
+    */
+    /* RETRO */
+    /*
+    "#010101","#FF56FF","#57FFFF","#FFFFFF","#57FFFF","#FF56FF","#57FFFF","#FFFFFF",
+    "#010101","#FF56FF","#57FFFF","#FFFFFF","#FF56FF","#FF56FF","#57FFFF","#FFFFFF",
+    */
+
+    /* DRACULA */
+    /*
+    "#2E3440","#ff5555","#50fa7b","#f1fa8c","#bd93f9","#ff79c6","#88C0D0","#ffffff",
+    "#44475a","#ff5555","#50fa7b","#f1fa8c","#bd93f9","#ff79c6","#88C0D0","#ffffff",
+    */
+
+    /* VIM */
+    /*
+    "#1c1c1c","#ab4242","#92cd72","#dbe5a0","#5f87af","#85678f","#42a497","#d6d6d6",
+    "#333333","#cc6666","#97D18F","#e8e47e","#87afd7","#af87af","#5fafaf","#afafd7",
+    */
 
 	[255] = 0,
 
@@ -130,7 +144,7 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 10;
+unsigned int defaultfg = 15;
 /*unsigned int defaultbg = 258;*/
 unsigned int defaultbg = 0;
 static unsigned int defaultcs = 256;
@@ -203,6 +217,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ TERMMOD,              XK_S,           cyclefonts,     {}        },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
