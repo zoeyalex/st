@@ -25,8 +25,8 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 0.8;
-static float chscale = 1;
+static float cwscale = 0.9;
+static float chscale = 1.1;
 
 /*
  * word delimiter string
@@ -97,17 +97,25 @@ float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence)  Format = 8norm \n 8bright in regular order e.g. black, red... */
 static const char *colorname[] = {
-    /* POWERLINE */
-    "#090C12","#6F3749","#384452","#4A3347","#4B545E","#7B5258","#8A6B6F","#C6999F",
-    "#293445","#6F3749","#384452","#4A3347","#4B545E","#7B5258","#8A6B6F","#C6999F",
+    /* PASTEL */
+    "#FEFDFB","#E796B2","#AE9ADB","#9F8AFF","#A48DFD","#F8B0CC","#D89DE7","#814663",
+    "#949396","#E796B2","#AE9ADB","#9F8AFF","#A48DFD","#F8B0CC","#D89DE7","#814663",
+
+    /* MOJAVE */
+    /*
+    "#050312","#61378D","#6E4DAE","#9E61A9","#A974BF","#C8868F","#D594AA","#DBCBE2",
+    "#998E9E","#61378D","#6E4DAE","#9E61A9","#A974BF","#C8868F","#D594AA","#DBCBE2",
+    */
     /* LAIN WHITE */
     /*
     "#000000","#884E5A","#975764","#A1616C","#B46E79","#C1697E","#9C8372","#CDBEB5",
     "#8F857E","#884E5A","#975764","#A1616C","#B46E79","#C1697E","#9C8372","#CDBEB5",
     */
     /* LAIN PINK */
+    /*
     "#000000","#8A4C5A","#9B5565","#A65B6C","#B76477","#C26A7E","#D8768D","#E8B5C1",
     "#A27E87","#8A4C5A","#9B5565","#A65B6C","#B76477","#C26A7E","#D8768D","#E8B5C1",
+    */
     /* SPACE */
     /*
     "#000000","#3C5B82","#405E83","#4B6A95","#5375A5","#5C85BA","#6B9ED6","#ACC6E2",
