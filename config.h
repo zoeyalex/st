@@ -97,10 +97,14 @@ float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence)  Format = 8norm \n 8bright in regular order e.g. black, red... */
 static const char *colorname[] = {
+    /* LAIN GARDEN */
+    "#17110E","#8B7F6F","#A09768","#C8A966","#AEA88F","#CFB59D","#C2BBB1","#E3DFC8",
+    "#9E9C8C","#8B7F6F","#A09768","#C8A966","#AEA88F","#CFB59D","#C2BBB1","#E3DFC8",
     /* PASTEL */
+    /*
     "#FEFDFB","#E796B2","#AE9ADB","#9F8AFF","#A48DFD","#F8B0CC","#D89DE7","#814663",
     "#949396","#E796B2","#AE9ADB","#9F8AFF","#A48DFD","#F8B0CC","#D89DE7","#814663",
-
+*/
     /* MOJAVE */
     /*
     "#050312","#61378D","#6E4DAE","#9E61A9","#A974BF","#C8868F","#D594AA","#DBCBE2",
