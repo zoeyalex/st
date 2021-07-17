@@ -1,7 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 static char *fonts[] = {
-	"Cozette:pixelsize=12:antialias=true:autohint=true:style=Regular",
-	"Terminus:pixelsize=13:antialias=true:autohint=true:style=Regular",
+    "AcPlusIBMBIOS:size=12:antialias=true:autohint=true:style=Regular",
+	/*"Cozette:pixelsize=12:antialias=true:autohint=true:style=Regular",*/
+    /*	"Terminus:pixelsize=13:antialias=true:autohint=true:style=Regular",*/
 };
 static size_t currentfont = 0;
 
@@ -25,8 +26,8 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 0.9;
-static float chscale = 1.1;
+static float cwscale = 1;
+static float chscale = 1.2;
 
 /*
  * word delimiter string
@@ -97,9 +98,19 @@ float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence)  Format = 8norm \n 8bright in regular order e.g. black, red... */
 static const char *colorname[] = {
+    "black", "red3", "green3", "yellow3", "blue2", "magenta3", "cyan3", "gray90",
+    "gray50", "red", "green", "yellow", "#5c5cff", "magenta", "cyan", "white",
+
+    /* WITCH */
+    /*
+    "#000000","#D64569","#703D91","#906E90","#BD68E6","#AC94AB","#C9AAD2","#E4DEE4",
+    "#9F9B9F","#D64569","#703D91","#906E90","#BD68E6","#AC94AB","#C9AAD2","#E4DEE4",
+    */
     /* LAIN GARDEN */
+    /*
     "#17110E","#8B7F6F","#A09768","#C8A966","#AEA88F","#CFB59D","#C2BBB1","#E3DFC8",
     "#9E9C8C","#8B7F6F","#A09768","#C8A966","#AEA88F","#CFB59D","#C2BBB1","#E3DFC8",
+    */
     /* PASTEL */
     /*
     "#FEFDFB","#E796B2","#AE9ADB","#9F8AFF","#A48DFD","#F8B0CC","#D89DE7","#814663",
