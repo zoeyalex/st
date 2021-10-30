@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 static char *fonts[] = {
-    "AcPlusIBMBIOS:size=12:antialias=true:autohint=true:style=Regular",
-	/*"Cozette:pixelsize=12:antialias=true:autohint=true:style=Regular",*/
-    /*	"Terminus:pixelsize=13:antialias=true:autohint=true:style=Regular",*/
+   /*"PxPlusIBMVGA8x16:pixelsize=16:antialias=true:autohint=true:style=Regular",*/
+	/*"AcPlusIBMBIOS:pixelsize=12:antialias=true:autohint=true:style=Regular",*/
+    "Terminus:pixelsize=16:antialias=true:autohint=true:style=Bold",
 };
 static size_t currentfont = 0;
 
@@ -27,7 +27,7 @@ char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1;
-static float chscale = 1.2;
+static float chscale = 1;
 
 /*
  * word delimiter string
@@ -99,7 +99,7 @@ float alpha = 1;
 /* Terminal colors (16 first used in escape sequence)  Format = 8norm \n 8bright in regular order e.g. black, red... */
 static const char *colorname[] = {
     "black", "red3", "green3", "yellow3", "#0000AA",/* "blue2",*/ "magenta3", "cyan3", "gray90",
-    "gray50", "red", "green", "yellow", "#5c5cff", "magenta", "cyan", "white",
+    "#AAAAAA", "red", "green", "yellow", "#5c5cff", "magenta", "cyan", "white",
 
     /* WITCH */
     /*
@@ -240,7 +240,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ TERMMOD,              XK_S,           cyclefonts,     {}        },
+//	{ TERMMOD,              XK_S,           cyclefonts,     {}        },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
