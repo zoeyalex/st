@@ -2,7 +2,7 @@
 static char *fonts[] = {
    /*"PxPlusIBMVGA8x16:pixelsize=16:antialias=true:autohint=true:style=Regular",*/
 	/*"AcPlusIBMBIOS:pixelsize=12:antialias=true:autohint=true:style=Regular",*/
-    "Terminus:pixelsize=16:antialias=true:autohint=true:style=Bold",
+    "MxPlusIBMVGA8x16:pixelsize=20:antialias=true:autohint=true:style=Regular",
 };
 static size_t currentfont = 0;
 
